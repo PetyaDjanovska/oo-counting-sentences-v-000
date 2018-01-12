@@ -16,7 +16,7 @@ class String
 
 binding.pry
   def count_sentences
-    self.split(/[.|?|!]/)
-
+    sentences = self.split(/[.|?|!]/).reject! {|s| s.blank?}
+    sentences. count
   end
 end
